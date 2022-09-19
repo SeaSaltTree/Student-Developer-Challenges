@@ -51,12 +51,23 @@ public class Challenges {
 
     public static void  main(String[] args){
         System.out.println("Enter a word you would like to reverse: ");
-        String input = new Scanner(System.in).nextLine();
+        Scanner myScanner = new Scanner(System.in);
+        String input = myScanner.nextLine();
         System.out.println(reverseString(input));
 
-        System.out.println(largestNumber(-1,-2,-3));
-        System.out.println(factorial(6));
 
-        System.out.println(fibonacci(6));
+        System.out.println("Enter three numbers to compare with a line in between: ");
+        int num1 = myScanner.nextInt();
+        int num2 = myScanner.nextInt();
+        int num3 = myScanner.nextInt();
+        System.out.format("The largest number is: %d \n", largestNumber(num1, num2, num3));
+
+        System.out.println("Enter a number to see its factorial ");
+        int factNum = myScanner.nextInt();
+        System.out.format("The factorial is: %d \n", factorial(factNum));
+
+        System.out.println("Enter a number to see the last number in its finobacci sequence: ");
+        int fibNum = myScanner.nextInt();
+        System.out.format("The last number in the fibonacci sequence is: %d \n", fibonacci(fibNum));
     }
 }
